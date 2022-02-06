@@ -31,11 +31,11 @@ run_node:
 	    ethereum/client-go \
 	    --datadir=/$(DATA_DIR) \
       --networkid=$(NETWORK_ID) \
-	    --rpc \
-			--rpcaddr=0.0.0.0 \
-	    --rpcapi=admin,db,eth,debug,miner,net,shh,txpool,personal,web3 \
-	    --rpccorsdomain=*
-		--rpcvhosts=*
+	    --http \
+			--http.addr=0.0.0.0 \
+	    --http.api=admin,db,eth,debug,miner,net,shh,txpool,personal,web3 \
+	    --http.corsdomain=*
+		--http.vhosts=*
         --allow-insecure-unlock
 
 console:
