@@ -128,9 +128,9 @@ dependencies = [
 
 [[package]]
 name = "async-std"
-version = "1.10.0"
+version = "1.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8056f1455169ab86dd47b47391e4ab0cbd25410a70e9fe675544f49bafaf952"
+checksum = "52580991739c5cdb36cde8b2a516371c0a3b70dda36d916cc08b82372916808c"
 dependencies = [
  "async-attributes",
  "async-channel",
@@ -312,9 +312,9 @@ checksum = "631ae5198c9be5e753e5cc215e1bd73c2b466a3565173db433f52bb9d3e66dba"
 
 [[package]]
 name = "candid"
-version = "0.7.11"
+version = "0.7.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f5531982124b31420dc41d0c8c0abbdd03e97d561dfb2af027b9140ee2b1f50c"
+checksum = "ba9e536514a3c655568e23e36e68cbef20ee6595f641719ade03a849a13ed0ac"
 dependencies = [
  "anyhow",
  "binread",
@@ -757,18 +757,14 @@ dependencies = [
 ]
 
 [[package]]
-name = "ic-cdk-macros"
-version = "0.3.3"
+name = "ic-cdk"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "08bac2578a4779c3ae6d24c766ec7127872d73f29a9e7d70b6607a2fdedd0dde"
+checksum = "953c6f940bbf1f79460849fa61cd3ac04768f8f0deb743d185860892f65cbff2"
 dependencies = [
  "candid",
- "ic-cdk 0.3.3",
- "proc-macro2",
- "quote",
+ "cfg-if",
  "serde",
- "serde_tokenstream",
- "syn",
 ]
 
 [[package]]
@@ -779,6 +775,21 @@ checksum = "a59a186745fd7d96ba2e057f3b3e3038578ae1e82dcb548bd96f48e9e4a39129"
 dependencies = [
  "candid",
  "ic-cdk 0.4.0",
+ "proc-macro2",
+ "quote",
+ "serde",
+ "serde_tokenstream",
+ "syn",
+]
+
+[[package]]
+name = "ic-cdk-macros"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d2d6181f0a29fefb75493822339591b6244098c5ab9eb67790cc6b805d3a42b"
+dependencies = [
+ "candid",
+ "ic-cdk 0.5.1",
  "proc-macro2",
  "quote",
  "serde",
@@ -799,14 +810,15 @@ dependencies = [
 
 [[package]]
 name = "ic-kit"
-version = "0.4.3"
+version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a0d4a05326865a582add1d6bcdec2b5d2af0415a12f6ef2431f3e93e52c347a"
+checksum = "4de974cacff3d70d96d648e4737a4563ff95cad1db2874978c1e6986bf798348"
 dependencies = [
  "async-std",
+ "candid",
  "futures",
- "ic-cdk 0.3.3",
- "ic-cdk-macros 0.3.3",
+ "ic-cdk 0.4.0",
+ "ic-cdk-macros 0.4.0",
  "serde",
  "serde_bytes",
 ]
@@ -1403,8 +1415,8 @@ dependencies = [
  "candid",
  "cap-sdk",
  "cap-standards",
- "ic-cdk 0.4.0",
- "ic-cdk-macros 0.4.0",
+ "ic-cdk 0.5.1",
+ "ic-cdk-macros 0.5.0",
  "ic-kit",
  "serde",
 ]
